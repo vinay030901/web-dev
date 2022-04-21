@@ -1,0 +1,19 @@
+<html>
+<body style="text-align: center;">
+<h1>Background Color</h1>
+<input type="button" value="Click" id="ctxt" onclick="changeColor()">
+<script>
+i=0;
+function changeColor()
+{
+    var color=["red","green","blue","yellow"];
+   	 document.bgColor=color[i];
+   	 i++;
+   	 if(i==color.length)
+   	 {
+   		 i=0;
+   	 }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute and Nth Child: Pseuod Selectors</title>
+    <style>
+        div{
+            text-align: center;
+        }
+        input{
+            display: block;
+            padding: 10px 10px;
+            margin: auto;
+        }
+        input[type="text"]
+        /*for input type text only*/
+        {
+            padding: 43px;
+            border: 5px solid blueviolet;
+        }
+        a[target]{
+            color: brown;
+            font-size: large;
+        }
+        a[target="_self"]
+        {
+            color: forestgreen;
+            font-size: 30px;
+        }
+        input[type="password"]
+        {
+            font-size: x-large;
+            border: 5px solid burlywood;
+        }
+        li:nth-child(3)
+        /*apply css on third child of list*/
+        {
+            color: orangered;
+        }
+        /*if we want to apply on every even element*/
+        li:nth-child(2n+0)
+        /*it starts with n=0*/
+        {
+            color: blueviolet;
+        }
+        li:nth-child(2n+1)
+        {
+            color: skyblue;
+        }
+        /*if we want to select the odd child, we can also do it directly*/
+        li:nth-child(odd)
+        {
+            font-size: 34px;
+        }
+        /*if we want to select the even child, we can also do it directly*/
+        li:nth-child(even)
+        {
+            background-color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><a href="http://google.com/" target="_blank">go to google</a></h1>
+        <!-- target=_blank will open the page in a new tab. -->
+        <h1><a href="http://facebook.com/" target="_self">go to facebook</a></h1>
+        <!-- target=_self will open the page in a same tab. -->
+        <form action="this.php" class="form-control">
+            <input type="text" name="name" placeholder="enter your name">
+            <input type="password" name="password" placeholder="enter password">
+            <input type="submit" value="submit" >
+        </form>
+        <ul>
+            <li class="item" id="item1">item 1</li>
+            <li class="item" id="item2">item 2</li>
+            <li class="item" id="item3">item 3</li>
+            <li class="item" id="item4">item 4</li>
+            <li class="item" id="item5">item 5</li>
+            <li class="item" id="item6">item 6</li>
+            <li class="item" id="item7">item 7</li>
+            <li class="item" id="item8">item 8</li>
+        </ul>
+    </div>
+</body>
+</html>

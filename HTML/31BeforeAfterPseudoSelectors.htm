@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After Pseudo Selectors</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            background: url(https://source.unsplash.com/user/erondu/1600x900);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            opacity:1.5;
+        }
+        header::before{
+            content: "";
+            background: url(https://source.unsplash.com/user/erondu/1600x900);
+           
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+        }
+        .navigation{
+            display: flex;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        li{
+            list-style: none;
+            padding: 34px 23px;
+        }
+        section{
+            height: 344px;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            margin: 3px 23px;
+            align-items: center;
+            align-items: center;
+            font-weight: bolder;
+        }
+       /* section::before{
+            content: "this is a content";
+            font-weight: bolder;
+            font-size: 40px;
+        }
+        section::after{
+            content: "my name is not Vinay";
+        }*/
+        h1{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">home</li>
+                <li class="item">about</li>
+                <li class="item">services</li>
+                <li class="item">contact us</li>
+            </ul>
+        </nav>
+    </header>
+        <section>
+            <h1>welcome to coding world</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quaerat pariatur odio, praesentium magni vero consequatur fugit laudantium sunt impedit voluptas quisquam. Nemo praesentium distinctio iusto voluptatum quidem neque quos, consequatur in illo. Rerum!</p>
+        </section>
+</body>
+</html>

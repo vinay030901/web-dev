@@ -1,0 +1,42 @@
+<!-- Pseudo-class selector: These selector are used for special cases, like mouse hover over the button or link, 
+or we click on that link or button, or focus on it. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-line {
+            color: #ff0000;
+            font-variant: small-caps;
+        }
+        ::before{
+            content: "para start: ";
+        }
+
+        ::after{
+            content: "para end: ";
+        }
+        /*whenver we select something, this will happen*/
+        ::selection{
+            color:green;
+            background-color:pink;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem laudantium quis.
+         Odit error repellendus odio corporis alias, corrupti 
+         cumque optio dolorem non labore ea mollitia fugiat 
+         quas minus animi.
+    Doloremque vel officiis ipsam officia magnam, adipisci vitae rem asperiores cum expedita excepturi, vero, natus culpa esse corrupti fuga veritatis qui? Molestias pariatur distinctio obcaecati. Numquam ex alias explicabo praesentium?
+    </p>
+
+    
+</body>
+
+</html>

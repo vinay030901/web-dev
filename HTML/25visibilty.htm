@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visibilty</title>
+    <style>
+        .box{
+            height: 150px;
+            width: 150px;
+            border: 3px solid blueviolet;
+        }
+        #box1{
+            /*z-index is when we overlap any element like a box with the help of top or bottom properties, z-index will only work when we make positon absolute or sticky or fixed or sticky*/
+            position: relative;
+            top: 50px;
+            background-color: green;
+            /*we know that red box is overlapping green one, so if we want to reverse it, we need to make the z-index of red box more than that of top*/
+            z-index: 35;
+            /*we made z-index of green 35 while z-index of red os 0 at defualt*/
+        }
+        #box2{
+            /*visibility: hidden;
+            hidden visibility hide the element but space is there*/
+            /*display: none;
+            display none remove the elements and doesn't reserve the place*/
+            position: relative;
+            
+            background-color: red;
+        }
+        #box3{
+            background-color: blue;
+            position: relative;
+            top: 30px;
+        }
+        #box4{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visibility and Z-index</h1>
+    <!--div.box#box$*4- this will make 4 div with class box and ids box1,box2,box3,box4. $ means number -->
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+</html>

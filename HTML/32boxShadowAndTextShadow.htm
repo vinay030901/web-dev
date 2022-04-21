@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadow</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        #card1{
+            padding: 23px 23px;
+            margin: 23px 12px;
+            background-color: darkkhaki;
+            color: black;
+            /*border: 3px solid greenyellow;*/
+            box-shadow: 10px 13px;
+            /*10 and 13 are width and length repectively*/
+            /*you can make box-shadow values postive and negative acccording to your need*/
+            box-shadow: 7px 10px 8px;
+            /*this will also provide blurrness to our box*/
+            box-shadow: 8px 8px 8px 5px green;
+            /*the fourth one here is spread radius means how much you want to exegerrate the box shadow*/
+            /*box-shadow- offset-x/ offset-y/blur radius/ spread radius*/
+        }
+        #card2{
+            padding: 23px 23px;
+            margin: 23px 12px;
+            background-color: darkkhaki;
+            color: black;
+            box-shadow: inset 10px 8px 10px 5px rgb(173, 107, 170);
+            /*if you want to fill the colour inside the box, you can use inset before it*/
+        }
+        #card3{
+            /*you can have multiple shadows too*/
+            padding: 23px 23px;
+            margin: 23px 12px;
+            background-color: darkkhaki;
+            color: black;
+            box-shadow: 10px 8px 6px red,15px 13px 8px blue;
+        }
+        .card h2{
+            text-shadow: 3px 3px 2px rgb(71, 0, 165);
+            /*text-shadow provide us with shadow in text*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h2>this is c++ course</h2>
+            <p>i have started my c++ course, and I am going to stop it right away because I like web development.I AM BADDASS.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat vitae harum libero iste dignissimos temporibus similique aliquam quae! Obcaecati fugiat quae perferendis aut quidem rem vero iusto laudantium saepe incidunt? Ratione quod ipsum neque!</p>
+        </div>
+        <div class="card" id="card2">
+            <h2>this is html course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nobis officia non ea deserunt veritatis minus sint error inventore. Corporis, ipsa. Iure ducimus quidem ut aut adipisci, possimus quo nemo, deleniti fuga odio tempore?</p>
+        </div>
+        <div class="card" id="card3">
+            <h2>card 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem molestiae natus excepturi obcaecati maiores error voluptate aliquid sunt laboriosam officia id, est voluptatum atque unde eum, facere inventore? Et tempore eligendi voluptates voluptatem obcaecati.</p>
+        </div>
+    </div>
+</body>
+</html>

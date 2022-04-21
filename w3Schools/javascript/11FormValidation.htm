@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        h1 {
+            /*border: 2px dotted;*/
+            text-align: center;
+            /*background-color: rgb(58, 58, 147);*/
+            margin: 50px;
+            font-size: 60px;
+            color: azure;
+        }
+
+        body {
+            background-image: url(https://i0.wp.com/www.csscodelab.com/wp-content/uploads/2019/11/stripe-hero-background-effect-html-css.png?fit=1062%2C631&ssl=1);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: "Helvetica Neue";
+        }
+
+        .formDesign {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .formDesign input {
+            width: 40%;
+            padding: 12px 20px;
+            border: 1px solid black;
+            margin: 15px;
+            font-family: "Helvetica Neue";
+            font-size: 20px;
+        }
+
+        .formError {
+            font-weight: bold;
+            color: red;
+            font-size: 20px;
+        }
+
+        .but {
+            width: 100px;
+            margin: auto;
+            text-align: center;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>FORM</h1>
+    <form action="/hello.php" name="myForm" onsubmit="return validateForm()" method="post">
+        <div class="formDesign" id="name">
+            Name:<input type="text" name="fname"><span class="formError"></span>
+        </div>
+        <div class="formDesign" id="email">
+            Email:<input type="email" name="femail"><span class="formError"></span>
+        </div>
+        <div class="formDesign" id="phone">
+            Phone:<input type="tel" name="fphone"><span class="formError"></span>
+        </div>
+        <div class="formDesign" id="pass">
+            Password:<input type="password" name="fpass" ><span class="formError"></span>
+        </div>
+        <div class="formDesign" id="cpass">
+            Confirm Password:<input type="password" name="fcpass"><span class="formError"></span>
+        </div>
+        <input class="but" type="submit" value="Submit">
+    </form>
+
+    <script>
+        function clearError() {
+            error = document.getElementsByClassName('formError');
+            for (let item of error) {
+                item.innerHTML = "";
+            }
+        }
+
+        function seterror(id, error) {
+            element = document.getElementById(id);
+            element.getElementsByClassName("formError")[0].innerHTML = error;
+        }
+
+        function validateForm() {
+            var returnVal = true;
+            clearError();
+            var name = document.forms['myForm']["fname"].value;
+            if (name.length == 0) {
+                seterror("name", "*length of name cannot be zero");
+                returnVal = false;
+            }
+            var phone = document.forms['myForm']["fphone"].value;
+            if (phone.length != 10 || phone[0]=='0') {
+                seterror("phone", "*phone number length should be 10");
+                returnVal = false;
+            }
+        
+            var password = document.forms['myForm']["fpass"].value;
+            if(password.length<6)
+            {
+                seterror("pass", "*password should be atleast 6 characters long");
+                returnVal = false;
+            }
+            return returnVal;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box{
+            background-color: royalblue;
+            color: black;
+            font-weight: bolder;
+            font-size: 62px;
+            text-align: center;
+            display: none;
+
+        }
+        /*only screen means that we want to support only screen type and not any other*/
+        @media only screen and (max-width:400px){
+            /*so according to this, if width is under 500, then display will be block*/
+            #box1{
+                display: block;
+            }
+        }
+        @media(min-width:400px) and (max-width:600px){
+            /*so according to this, if width is under 500px and under 300px, then display will be block*/
+            #box2{
+                display: block;
+                background-color: cyan;
+            }
+        }
+        @media(min-width:600px) and (max-width:800px){
+            /*so according to this, if width is under 500px and under 300px, then display will be block*/
+            #box3{
+                display: block;
+                background-color: yellowgreen;
+            }
+        }
+        @media(min-width:800px){
+            /*so according to this, if width is under 500px and under 300px, then display will be block*/
+            #box4{
+                display: block;
+                background-color: yellowgreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">I am a mobile</div>
+    <div class="box" id="box2">I am a tablet</div>
+    <div class="box" id="box3">I am a computer</div>
+    <div class="box" id="box4">I am a televison</div>
+</body>
+</html>

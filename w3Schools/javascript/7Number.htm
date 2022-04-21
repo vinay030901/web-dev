@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>The toString() method converts a number to a string.</p>
+
+<p id="demo"></p>
+
+<script>
+let x = 123;
+document.getElementById("demo").innerHTML =
+  x.toString() + "<br>" +
+   (123).toString() + "<br>" +
+   (100 + 23).toString();
+
+/*There are 3 JavaScript methods that can be used to convert variables to numbers:
+
+The Number() method
+The parseInt() method
+The parseFloat() method*/
+document.getElementById("demo").innerHTML = 
+  Number(true) + "<br>" +
+  Number(false) + "<br>" +
+  Number("10") + "<br>" + 
+  Number("  10") + "<br>" +
+  Number("10  ") + "<br>" +
+  Number(" 10  ") + "<br>" +
+  Number("10.33") + "<br>";
+  //The Number() method returns the number of milliseconds since 1.1.1970.
+  document.write(Number(new Date("2013-4-4")));
+  /*MAX_VALUE returns the largest possible number in JavaScript.*/
+  let l=Number.MAX_VALUE;
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>forms</h2>
+    <form action="backend.php">
+        <!-- action is place where our data goes or saves -->
+        <!-- div tag is used to have input beneath the other input  -->
+        <div>
+            <label for="name">Name</label>
+            <!-- label- by clicking on name our name  will be selected -->
+            <input type="text" name="MYname" id="name">
+        </div>
+        <!-- input specifies the type of input -->
+        <!-- name specifies that how the text input will save in my backend -->
+        <div>
+            <br><label for="role">Role:</label>
+            <input type="text" name="roles" id="role">
+        </div>
+        <br>
+        <label for="tele">tele:</label>
+        <input type="tel" name="telephone" id="tele">
+        <br>
+        <div>
+            <!-- type- number -->
+            ID: <input type="number" name="ID">
+        </div>
+        <br>
+        <div>
+            <!-- type- number -->
+            <label for="car">Car</label>
+            <select name="myCar" id="car">
+                <!-- option is used to give options for something -->
+                <!-- you can write selected to pre select something -->
+                <option value="indica">Indica</option>
+                <option value="duster" selected>Renault</option>
+                <option value="maruti">swift</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <div>
+            <!-- this is text area for longer sequence of text -->
+            write about yourself: <br><textarea name="text" cols="20" rows="20"></textarea>
+        </div>
+        <br>
+        <div>
+            Email ID: <input type="email" name="email ID">
+        </div>
+        <br>
+        <div>
+            <!-- used to get checkboxes -->
+            <label for="ID">are you 18+</label>
+            <!-- by clicking on label, our checkbox will be selected easily -->
+            <input type="checkbox" name="ID" id="ID">
+        </div>
+        <br>
+        <br>
+        <div>
+            <!-- type- radio -->
+            Gender: Male<input type="radio" name="gender">Female<input type="radio" name="gender">
+        </div>
+        <br>
+        <div>
+            <!-- date can be inputted using date type -->
+            Date of Birth: <input type="date" name="date of birth">
+        </div>
+        <br>
+        <input type="submit" value="submit now">
+        <br>
+        <br>
+        <div>
+            <!-- reset type resets every input given beforehand -->
+            <input type="reset" name="ID" value="reset button">
+        </div>
+        <input type="button" name="button" value="button for practice">
+        <p>this is my first form
+    </form>
+    </p>
+    </form>
+</body>
+
+</html>

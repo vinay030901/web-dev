@@ -1,0 +1,32 @@
+<!-- we can print in javascript program using following methods
+innerHTML()
+document.write()
+window.alert()
+console.log() -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>output</title>
+    <script>
+        function inner(){
+            /*javascript can access the input or id using innerHtml function and we can it using the id*/
+            document.getElementById("demo").innerHTML=5+6;
+        }
+    </script>
+</head>
+<body>
+    <p id="demo">change it</p>
+    <button type="button" onclick="inner()">5+6</button>
+    <!-- for testing purposes it is convenient to write document.write-->
+    <br>
+    <script>document.write("using document write");</script>
+    <script>walert("hello Vinay")
+
+        /*for debugging purposes, you can console.log*/
+        console.log(8+15);
+    </script>
+</body>
+</html>

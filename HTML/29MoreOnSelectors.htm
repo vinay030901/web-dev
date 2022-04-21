@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More On Selectors</title>
+    <style>
+        h1{
+            background-color: blueviolet;
+            text-align: center;
+            font-weight: bold;
+        }
+        div>p/*select p if p is directly under div, so it will not affect the one with div-li-p*/{
+            font-weight: bolder;
+            font-size: large;
+            color: blueviolet;
+            background-color: white;
+        }
+        div+p{
+            /*this will apply to p whose last sibling is div*/
+            color: brown;
+            font-size: large;
+            font-style: italic;
+            background-color: gray;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>This is more on Selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item"><p>this is the paragraph in li tag.</p></li>
+                <p>this is para under ul.</p>
+            </ul>
+            <p>this is a paragraph</p>
+        </div>
+        <p>this is another paragraph</p>
+    </div>
+    <p>this is outermost paragraph</p>
+</body>
+</html>

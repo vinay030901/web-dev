@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Units</title>
+    <style>
+        html{
+            font-size: 10px;
+        }
+        .container{
+            font-size: 10px;
+            /*height: 300px;*/
+            height: 100vh;
+            /*100vh means full height of browser page*/
+            width: 500px;
+            width: 100vw;
+            /*100vw means full width of browser page*/
+            /*v(h/w) is like percentage*/
+            border: 3px solid blueviolet;
+        }
+        h1{
+            text-align: center;
+        }
+        #first{
+            font-size: 3em;
+            /*this 3em will make the font size of item 3 times the size of parent, since parent(container) font size is 10px, the size of first is 30px
+            padding: 3em;
+            /*padding will be 3 times the font size, thats is 3*3*10=90px*/
+        }
+        #second{
+            font-size: 3rem;
+            /*rem works only relative to html, that is 45px
+            padding: 3rem;*/
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1 id="first">first heading</h1>
+        <h1 id="second">second heading</h1>
+        <h1 id="third">third heading</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Animations and Keyframes</title>
+    <style>
+        .container{
+            display: flex;
+            background-color: rgb(134, 134, 180);
+        }
+        .box{
+            background-color: blueviolet;
+            width: 250px;
+            height: 250px;
+            font-size: xx-large;
+            position: relative;
+            animation-name: champ;
+            animation-iteration-count: 3;
+            animation-duration: 2s;
+            /*the infinite count will never stop the iteration
+            animation-iteration-count: infinite;*/
+           /* animation-fill-mode: forwards;
+            /*if want the animation to remain there and dont't go back, then we'll make animation fill mode forwards*/
+            /*alternate will stop the animation after one go*/
+            animation-timing-function: ease-in;
+            /*ease in starts slowly and accelerates*/
+            animation-timing-function: ease-out;
+            /*easy out starts quickly and deacclerates*/
+        }
+        @keyframes champ{
+            from{
+                width: 200px;
+            }
+            to{
+                width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            this is a box.
+        </div>
+    </div>
+</body>
+</html>

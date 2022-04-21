@@ -1,0 +1,17 @@
+<html>
+<body>
+    <h2>Onclick of button new button is getting appended</h2>
+<input type="button" value="Click" onclick="fun()">
+<script>
+function fun()
+{
+    var b1=document.createElement("button");
+	var text=document.createTextNode("NewButton");
+ 	b1.appendChild(text);
+	b1.setAttribute("onclick","alert('Alert from new button')");
+ 	document.body.appendChild(b1);
+    
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positon</title>
+    <style>
+        .container{
+            color: black;
+            border: 5px solid rgb(59, 32, 59);
+            background-color: rgb(187, 161, 143);
+            height: 3444px;
+        }
+        /*CSS postions- static(by default), relative, absolute, fixed, sticky*/
+        .box{
+            border: 5px solid rgb(122, 70, 70);
+            display: inline-block;
+            box-sizing: border-box;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+        }
+        /*#box3{
+            /*relative means relative to normal positon-means we can use top, bottom, right, left properties
+            position: relative;
+            top: 20px;
+            left: 34px;
+        }*/
+        /*#box3{
+            /*absolute means relative to its parent position-
+            position: absolute;
+            top: 20px;
+            left: 34px;
+        }*/
+        /*fixed means- whenever we scroll the container, the box remains at a certain positon and move with it*/
+        /*#box3{
+            position: fixed;
+            right: 5px;
+            bottom: 34px;
+            font-size: 36px;
+        }*/
+        /*sticky means- whenever we scroll, the box remains at the same position or height*/
+        #box3{
+            position: sticky;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box" id="box1"> </div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3" >chat with me bro</div>
+    <div class="box" id="box4"></div>
+</div>
+</body>
+</html>

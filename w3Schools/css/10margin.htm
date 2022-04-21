@@ -1,0 +1,39 @@
+<!-- margin is used to create space around elements -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            border: 3px dashed blue;
+            margin: 150px 40px 30px 40px;
+            width: 100%;
+            /*
+            if 4 input: top right bottom left
+            if 3: top right-left bottom
+            if 2: top-bottom right-left
+            if 1: top-bottom-right-left*/
+        }
+        div{
+            width: 50%;
+            border: 1px solid red;
+            margin: auto;
+            /*if we give auto margin, it will align itself*/
+        }
+    </style>
+</head>
+<body>
+    <h1>margins</h1>
+    <p>i have used my own margins here </p>
+    <div>my name is vinay kumar</div>
+</body>
+</html>
+<!-- Margin Collapse
+Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
+
+This does not happen on left and right margins! Only top and bottom margins!
+
+Look at the following example: -->

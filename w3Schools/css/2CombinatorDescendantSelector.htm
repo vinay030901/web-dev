@@ -1,0 +1,54 @@
+<!-- A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+
+There are four different combinators in CSS:
+
+descendant selector (space)
+child selector (>)
+adjacent sibling selector (+)
+general sibling selector (~)
+
+Descendant Selector
+The descendant selector matches all elements that are descendants of a specified element.
+
+The following example selects all <p> elements inside <div> elements: 
+
+Example
+div p {
+  background-color: yellow;
+}
+denoted by space( ),
+For example: div p{color:red;}
+So, all the p elements in div will be coloured red here.
+One thing to notice is, if we have a condition like
+<div>
+<p>bro</p>
+<section><p>hello</p></section>
+</div>
+Then also p will be coloured red, because p is descendant of div
+Answer of above queury:
+Bro
+hello
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Selector</title>
+    <style>
+        div p{
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>my name is vinay</p>
+        <strong><p>hello brother</p></strong>
+        <!-- we can see that p is under strong, but it is descendant of div, so it is affected -->
+    </div>
+    <p>this will not be under descendant selectors</p>
+</body>
+</html>

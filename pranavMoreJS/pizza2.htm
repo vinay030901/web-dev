@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ch() {
+            var x, y
+            x = ""
+            y = ""
+            x = parseInt(x)
+            y = parseInt(y)
+            
+            y = document.forms['frm']['t2'].value
+            if (document.getElementById("r0").checked)
+                x = 70
+            if (document.getElementById("r1").checked)
+                x = 90
+            if (document.forms['frm']['c1'].checked)
+                x = 50 + x
+            if (document.forms['frm']['c2'].checked)
+                x = 70 + x
+            if (document.forms['frm']['c3'].checked)
+                x = 90 + x
+            document.frm.t1.value = (x) * y
+        }
+    </script>
+</head>
+
+<body>
+    <form name="frm">
+        <font text="cyan">
+            <center><big><b><u>PIZZA RATE</b></u></center>
+        </font>
+        Quantity<input type="number" name="t2">
+        <br>
+        Small(Rs 70)<input type="radio" name="r" id="r0"> Medium(Rs 90)<input type="radio" name="r" id="r1">
+        <br>
+        cheese(Rs 50)<input type="checkbox" name="c1">
+        <br>
+        olives(Rs 70)<input type="checkbox" name="c2">
+        <br>
+        onion(Rs 90)<input type="checkbox" name="c3">
+        <br>
+        <input type="button" value="BILL" onClick="ch()"> <input type="text" name="t1">
+    </form>
+</body>
+<script src="index.js"></script>
+
+</html>

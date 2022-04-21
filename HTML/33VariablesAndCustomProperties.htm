@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and Custom Properties</title>
+    <style>
+        /*to make a variable, just put '--' in front of it.*/
+        :root{
+            /*if you want to make a global variables, use root*/
+            --primary-color:blue;
+            --danger-color:red;
+            --maxw:500px;
+        }
+        .box{
+            --box-color: rgb(65, 141, 65);
+            /*the scope of the above variable is only inside this .box, so we can't use this variable elsewhere*/
+            width: 200px;
+            height: 200px;
+            background-color:var(--box-color);
+            margin: 20px 20px;
+            box-shadow: 3px 5px 5px var(--box-color);
+            border: 3px solid saddlebrown;
+        }
+        #b{
+            background-color: var(--primary-color);
+            box-shadow:4px 8px 7px var(--danger-color);
+        }
+        .container{
+            max-width: var(--maxw);
+            --bcolor:rgb(163, 20, 163);/*this is a local variable*/
+            display: flex;
+            background-color: var(--bcolor);
+            justify-content:space-evenly;
+            align-items: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box" id="b"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- used to create space aroung the elements content
+    inside the border -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paddding</title>
+    <style>
+        p{
+            border: 3px dashed blue;
+            margin: 150px 40px 30px 40px;
+            width: 100%;
+            padding: 40px 30px 90px 20px;
+            /*
+            for padding
+            if 4 input: top right bottom left
+            if 3: top right-left bottom
+            if 2: top-bottom right-left
+            if 1: top-bottom-right-left
+            we also padding-left, right,top and bottom*/
+        }
+        div{
+            width: 50%;
+            border: 5px solid red;
+            padding: 0.5em;
+            margin: auto;
+            /*if we give auto margin, it will align itself*/
+        }
+        /*Padding and Element Width
+The CSS width property specifies the width of the element's 
+content area. The content area is the portion inside the 
+padding, border, and margin of an element (the box model).
+
+So, if an element has a specified width, the padding added 
+to that element will be added to the total width of the 
+element. This is often an undesirable result.*/
+        .box{
+            border: 9px solid green;
+            width:300px;
+            padding:50px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>margins</h1>
+    <p>i have used my own margins here </p>
+    <div>my name is vinay kumar</div>
+    <p class="box">i am using box sizing</p>
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>styling links and buttons</title>
+    <style>
+        .container{
+            border: 3px solid violet;
+            background-color: rgb(202, 202, 202);
+            padding: 34px 34px;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+    .btn
+    {
+        background-color: rgb(233, 174, 66);
+        padding: 6px;
+        border: none;
+        cursor: pointer;
+        font-size: 13px;
+        border-radius: 4px;
+    }
+    .btn:hover{
+        background-color: deeppink;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        /* hover is for whenever someone points the arrowaw onto that button */
+        color: rgb(0, 0, 0);
+        background-color: brown;
+    }
+    a:visited{
+        /* visited is for whenever someone visited that link before*/
+        background-color: blue;
+        color: darkgreen;
+    }
+    a:active{
+        background-color: darkolivegreen;
+    }
+    </style>
+</head>
+<body>
+    <div class="container" id="cont1">
+    <h3>this is my heading</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni officiis unde distinctio nesciunt. Est natus fuga, illum consequuntur quam hic nostrum eos molestiae iste repellendus excepturi cupiditate velit quis. Quas officia a illo doloribus.</p>
+    <a href="http://google.com" > Read more</a>
+    <button class="btn">contact us</button>
+</div>
+</body>
+</html>

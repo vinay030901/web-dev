@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <script>
+        let str="my name is vinay";
+        document.write(str.length);
+        /*The string will be chopped to "We are the so-called ".
+
+The solution to avoid this problem, is to use the backslash escape character.
+
+The backslash (\) escape character turns special characters into string characters:
+
+Code	Result	    Description
+\'	    '	        Single quote
+\"	     "	        Double quote
+\\	    \	        Backslash*/
+let text = "We are the so-called \"Vikings\" from the north.";
+document.write("\n");
+document.write(text);
+
+document.write(text.slice(7,10));
+document.write(text.toUpperCase());
+document.write(text.charAt(1));
+
+//converting string to array...
+const arr=text.split(" ");
+document.write(arr[0]);
+document.write(txt.search("are"));
+    </script>
+
+    <h2>JavaScript String Search</h2>
+
+    <p>Search a string for "ain":</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    text = "The rain in SPAIN stays mainly in the plain"; 
+    document.getElementById("demo").innerHTML = text.match(/ain/g);
+    document.getElementById("demo").innerHTML = text.match(/ain/gi);
+    //gi is global case insensitive and g is case sensitive
+    </script>
+</body>
+</html>

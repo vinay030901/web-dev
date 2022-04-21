@@ -1,0 +1,17 @@
+<html>
+<body>
+Enter your name <input type="text" id="t1"><br><br>
+<input type="button" value="Click" onclick="fun1()"><br><br>
+<script>
+    function fun1()
+    {
+     	var v1=document.getElementById("d1");
+        var v2 = prompt("enter your name");
+     	alert(v1.innerHTML);
+     	var t1=document.getElementById('t1').value;
+     	v1.innerHTML+= " " +t1+" "+v2+"Welcome to world of  Javascript";	 
+  	 }
+</script>
+<div id="d1">Hello</div><br>
+</body>
+</html>
