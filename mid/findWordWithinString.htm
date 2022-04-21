@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(){
+            var text=document.getElementById("inp").value;
+            var find=document.getElementById("find").value;
+            var ans=text.split(find).length-1;
+            document.getElementById("ans").value=ans;
+        }
+    </script>
+</head>
+<body>
+    <p id="demo">Enter the string: </p>
+    <input type="text" id="inp">
+    <p id="dem">Enter the word to find: </p>
+    <input type="text" id="find"><br>
+    <button onclick="fun()" value="" id="but">find count</button>
+    <br>
+    Ans: <input type="text" id="ans">
+</body>
+</html>

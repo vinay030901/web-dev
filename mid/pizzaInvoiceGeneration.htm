@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(){
+            var count = parseInt(document.getElementById("quantity").value);
+            var x;
+            if(document.getElementById("small").checked)
+            x=70;
+            else x=90;
+            if(document.getElementById("cheese").checked)
+            x+=50;
+            if(document.getElementById("olives").checked)
+            x+=70;
+            if(document.getElementById("onion").checked)
+            x+=90;
+            document.getElementById("bill").value=(count*x);
+        }
+    </script>
+</head>
+<body>
+    <h1 style="text-align: center;">PIZZA INVOICE</h1>
+    quantity: <input type="number" id="quantity"><br>
+    Small(70): <input type="radio" id="small" name="type">
+    Large(90): <input type="radio" id="large" name="type">
+    <br><br>
+    cheese(50) <input type="checkbox" id="cheese"><br>
+    olives(70) <input type="checkbox" id="olives"><br>
+    onion(90) <input type="checkbox" id="onion"><br>
+    <button onclick="fun()">Bill</button>
+    <input type="text" placeholder="Your Bill" id="bill">
+</body>
+</html>

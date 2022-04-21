@@ -1,0 +1,39 @@
+<html>
+ 
+<head>
+   <script>
+ 
+     // coordinate function that calculate the X
+     // coordinate and Y coordinates
+     function coordinate(event) {
+ 
+     // clientX gives horizontal coordinate
+     var x = event.clientX;
+ 
+     // clientY gives vertical coordinates
+     var y = event.clientY;
+     document.getElementById("X").value = x;
+     document.getElementById("Y").value = y;
+  }
+    </script>
+</head>
+ 
+<!-- onmousemove event is called when the mouse
+     pointer is moving over the screen -->
+ 
+<!-- calling of coordinate function -->
+ 
+<body onmousemove="coordinate(event)">
+ 
+   <!-- X coordinate is stored in X-coordinate variable -->
+   X-coordinate
+   <input type="text" id="X">
+   <br>
+   <br>
+ 
+   <!-- Y coordinate is stored in Y-coordinate variable -->
+   Y-coordinate
+   <input type="text" id="Y">
+ 
+</body>
+</html>
