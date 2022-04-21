@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Regular Expression Group Demo</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "Do you know If this is all there is?";
+let pattern1 = /[is]/gi; 
+let pattern2 = /[a-h]/g;
+let pattern3 = /[A-E]/g;
+let pattern4 = /[A-e]/g;
+
+let result1 = text.match(pattern3);
+
+document.getElementById("demo").innerHTML = result1;
+</script>
+
+</body>
+</html>
