@@ -2,18 +2,9 @@
  
 <head>
    <script>
- 
-     // coordinate function that calculate the X
-     // coordinate and Y coordinates
      function coordinate(event) {
- 
-     // clientX gives horizontal coordinate
-     var x = event.clientX;
- 
-     // clientY gives vertical coordinates
-     var y = event.clientY;
-     document.getElementById("X").value = x;
-     document.getElementById("Y").value = y;
+     document.getElementById("X").value = event.clientX;
+     document.getElementById("Y").value = event.clientY;
   }
     </script>
 </head>
