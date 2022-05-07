@@ -5,7 +5,6 @@ body {
 }
 
 #odiv {
-
     margin-left: 30%;
     margin-right: 30%;
     color: gold;
@@ -16,6 +15,13 @@ body {
     border-color: lime;
     border-radius: 15px;
 }
+
+#odiv:hover {
+    box-shadow: 1px 1px 16px black;
+    background-image: url(img/blueblur.jpg);
+    background-size: cover;
+}
+
 
 button {
     background-color: green;
@@ -30,7 +36,15 @@ button {
 input {
     background-color: blanchedalmond;
     margin: 4px;
-    border-radius: 5px;
+    border-radius: 8px;
+    border-left: orange 7px solid;
+    border-right: orange 7px solid;
+}
+
+input:hover {
+    border-radius: 10px;
+    border-left: lime 7px solid;
+    border-right: lime 7px solid;
 }
 
 h1 {
